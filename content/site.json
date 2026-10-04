@@ -1,0 +1,1644 @@
+{
+  "source": "https://preview-fortinet-academy-2195.sitelas.com",
+  "exported": "2026-10-04",
+  "theme": {
+    "slug": "console-slate",
+    "name": "Console Slate",
+    "palette": {
+      "primary": "#0f172a",
+      "secondary": "#94a3b8",
+      "accent": "#ef4444",
+      "background": "#0b0f14",
+      "surface": "#1e293b",
+      "text": "#e2e8f0"
+    },
+    "typography": {
+      "font_family": "IBM Plex Sans, sans-serif",
+      "heading_family": "Bricolage Grotesque, sans-serif"
+    }
+  },
+  "pages": [
+    {
+      "slug": "/",
+      "title": "Home",
+      "text_nodes": [
+        {
+          "id": "hero-eyebrow",
+          "kind": "text",
+          "section_id": "hero-section",
+          "current_text": "FORTINET ACADEMY",
+          "char_count": 16,
+          "data_field": "content",
+          "slot": "hero-eyebrow"
+        },
+        {
+          "id": "hero-heading",
+          "kind": "heading",
+          "section_id": "hero-section",
+          "current_text": "Maîtrise FortiGate et FortiOS, du premier flux au diagnostic expert",
+          "char_count": 67,
+          "data_field": "text",
+          "slot": "hero-title",
+          "level": 1
+        },
+        {
+          "id": "hero-body",
+          "kind": "text",
+          "section_id": "hero-section",
+          "current_text": "Une formation pratique en français pour administrateurs systèmes et réseaux : réseau, sécurité, VPN, identité, supervision, RUN et résolution d’incidents.",
+          "char_count": 154,
+          "data_field": "content",
+          "slot": "hero-body"
+        },
+        {
+          "id": "stats-eyebrow",
+          "kind": "text",
+          "section_id": "stats-section",
+          "current_text": "PARCOURS",
+          "char_count": 8,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "stats-heading",
+          "kind": "heading",
+          "section_id": "stats-section",
+          "current_text": "Un cursus complet, structuré et opérationnel",
+          "char_count": 44,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "stats-stat0-lbl",
+          "kind": "text",
+          "section_id": "stats-section",
+          "current_text": "modules",
+          "char_count": 7,
+          "data_field": "content",
+          "slot": "stat-label"
+        },
+        {
+          "id": "stats-stat1-lbl",
+          "kind": "text",
+          "section_id": "stats-section",
+          "current_text": "leçons",
+          "char_count": 6,
+          "data_field": "content",
+          "slot": "stat-label"
+        },
+        {
+          "id": "stats-stat2-lbl",
+          "kind": "text",
+          "section_id": "stats-section",
+          "current_text": "niveaux : fondations, avancé, expert",
+          "char_count": 36,
+          "data_field": "content",
+          "slot": "stat-label"
+        },
+        {
+          "id": "stats-stat3-lbl",
+          "kind": "text",
+          "section_id": "stats-section",
+          "current_text": "laboratoire final multi-sites",
+          "char_count": 29,
+          "data_field": "content",
+          "slot": "stat-label"
+        },
+        {
+          "id": "features-eyebrow",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "COMPÉTENCES",
+          "char_count": 11,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "features-heading",
+          "kind": "heading",
+          "section_id": "features-section",
+          "current_text": "Tout ce qu’un administrateur Fortinet doit savoir maîtriser",
+          "char_count": 59,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "features-body",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "Chaque axe combine théorie, GUI FortiOS, CLI, pièges fréquents, cas pratique et validation.",
+          "char_count": 91,
+          "data_field": "content",
+          "slot": "section-body"
+        },
+        {
+          "id": "features-card0-title",
+          "kind": "heading",
+          "section_id": "features-section",
+          "current_text": "Réseau & routage",
+          "char_count": 16,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-card0-body",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "Interfaces, VLAN, DHCP, DNS, routes statiques, OSPF et BGP.",
+          "char_count": 59,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-card1-title",
+          "kind": "heading",
+          "section_id": "features-section",
+          "current_text": "Firewall & sécurité",
+          "char_count": 19,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-card1-body",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "Policies, NAT, UTM, IPS, Web Filter, Application Control et inspection TLS.",
+          "char_count": 75,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-card2-title",
+          "kind": "heading",
+          "section_id": "features-section",
+          "current_text": "VPN & SD-WAN",
+          "char_count": 12,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-card2-body",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "IPsec, accès distant, health-checks, SLA et interconnexion de sites.",
+          "char_count": 68,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-card3-title",
+          "kind": "heading",
+          "section_id": "features-section",
+          "current_text": "Identité & Zero Trust",
+          "char_count": 21,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-card3-body",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "LDAP, RADIUS, FSSO, EMS, posture endpoint et ZTNA.",
+          "char_count": 50,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-card4-title",
+          "kind": "heading",
+          "section_id": "features-section",
+          "current_text": "Diagnostic & RUN",
+          "char_count": 16,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-card4-body",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "Logs, sessions, sniffer, debug flow, HA, supervision et procédures de changement.",
+          "char_count": 81,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-card5-title",
+          "kind": "heading",
+          "section_id": "features-section",
+          "current_text": "Écosystème Fortinet",
+          "char_count": 19,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-card5-body",
+          "kind": "text",
+          "section_id": "features-section",
+          "current_text": "FortiManager, FortiAnalyzer, FortiSwitch, FortiAP, FortiClient EMS et FortiGuard.",
+          "char_count": 81,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "process-steps-eyebrow",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "MÉTHODE",
+          "char_count": 7,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "process-steps-heading",
+          "kind": "heading",
+          "section_id": "process-steps-section",
+          "current_text": "Comprendre avant de modifier",
+          "char_count": 28,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "process-steps-step0-num",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "01",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-step0-title",
+          "kind": "heading",
+          "section_id": "process-steps-section",
+          "current_text": "1. Observer",
+          "char_count": 11,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-step0-body",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "Partir des symptômes, des logs et du chemin réel du trafic.",
+          "char_count": 59,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "process-steps-step1-num",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "02",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-step1-title",
+          "kind": "heading",
+          "section_id": "process-steps-section",
+          "current_text": "2. Suivre le flux",
+          "char_count": 17,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-step1-body",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "Interface, route, policy, session, inspection, NAT et sortie.",
+          "char_count": 61,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "process-steps-step2-num",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "03",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-step2-title",
+          "kind": "heading",
+          "section_id": "process-steps-section",
+          "current_text": "3. Prouver",
+          "char_count": 10,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-step2-body",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "CLI, sniffer et debug flow pour valider chaque hypothèse.",
+          "char_count": 57,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "process-steps-step3-num",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "04",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-step3-title",
+          "kind": "heading",
+          "section_id": "process-steps-section",
+          "current_text": "4. Corriger",
+          "char_count": 11,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-step3-body",
+          "kind": "text",
+          "section_id": "process-steps-section",
+          "current_text": "Une modification à la fois avec validation avant/après et rollback.",
+          "char_count": 67,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-2-eyebrow",
+          "kind": "text",
+          "section_id": "features-2-section",
+          "current_text": "LABS",
+          "char_count": 4,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "features-2-heading",
+          "kind": "heading",
+          "section_id": "features-2-section",
+          "current_text": "Des incidents proches de la production",
+          "char_count": 38,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "features-2-card0-title",
+          "kind": "heading",
+          "section_id": "features-2-section",
+          "current_text": "VLAN sans DHCP",
+          "char_count": 14,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-2-card0-body",
+          "kind": "text",
+          "section_id": "features-2-section",
+          "current_text": "Suivre le tag, le trunk, le relay et les échanges UDP 67/68.",
+          "char_count": 60,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-2-card1-title",
+          "kind": "heading",
+          "section_id": "features-2-section",
+          "current_text": "VPN UP mais trafic KO",
+          "char_count": 21,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-2-card1-body",
+          "kind": "text",
+          "section_id": "features-2-section",
+          "current_text": "Routes, policies, sélecteurs Phase 2 et chemin retour.",
+          "char_count": 54,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-2-card2-title",
+          "kind": "heading",
+          "section_id": "features-2-section",
+          "current_text": "Application cassée par TLS",
+          "char_count": 26,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-2-card2-body",
+          "kind": "text",
+          "section_id": "features-2-section",
+          "current_text": "Analyser deep inspection, certificats et exceptions ciblées.",
+          "char_count": 60,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-2-card3-title",
+          "kind": "heading",
+          "section_id": "features-2-section",
+          "current_text": "Utilisateur AD mal identifié",
+          "char_count": 28,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-2-card3-body",
+          "kind": "text",
+          "section_id": "features-2-section",
+          "current_text": "LDAP, groupes, FSSO et ordre des policies.",
+          "char_count": 42,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-2-card4-title",
+          "kind": "heading",
+          "section_id": "features-2-section",
+          "current_text": "HA out-of-sync",
+          "char_count": 14,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-2-card4-body",
+          "kind": "text",
+          "section_id": "features-2-section",
+          "current_text": "Heartbeat, checksums, synchronisation et validation du cluster.",
+          "char_count": 63,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-2-card5-title",
+          "kind": "heading",
+          "section_id": "features-2-section",
+          "current_text": "Examen multi-sites",
+          "char_count": 18,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-2-card5-body",
+          "kind": "text",
+          "section_id": "features-2-section",
+          "current_text": "Cinq pannes simultanées à isoler et corriger avec preuves.",
+          "char_count": 58,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "cta-heading",
+          "kind": "heading",
+          "section_id": "cta-section",
+          "current_text": "Passe de la théorie à l’exploitation",
+          "char_count": 36,
+          "data_field": "text",
+          "slot": "cta-strip-title",
+          "level": 2
+        },
+        {
+          "id": "cta-body",
+          "kind": "text",
+          "section_id": "cta-section",
+          "current_text": "Travaille les labs, consulte le glossaire et vérifie les notions avec les quiz.",
+          "char_count": 79,
+          "data_field": "content",
+          "slot": "cta-strip-body"
+        },
+        {
+          "id": "faq-eyebrow",
+          "kind": "text",
+          "section_id": "faq-section",
+          "current_text": "FAQ",
+          "char_count": 3,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "faq-heading",
+          "kind": "heading",
+          "section_id": "faq-section",
+          "current_text": "Questions fréquentes",
+          "char_count": 20,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "faq-qa0-q",
+          "kind": "heading",
+          "section_id": "faq-section",
+          "current_text": "Faut-il déjà connaître Fortinet ?",
+          "char_count": 33,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-qa0-a",
+          "kind": "text",
+          "section_id": "faq-section",
+          "current_text": "Non. Le parcours commence par la logique réseau et le fonctionnement stateful avant d’aller vers les fonctions avancées.",
+          "char_count": 120,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-qa1-q",
+          "kind": "heading",
+          "section_id": "faq-section",
+          "current_text": "GUI ou CLI ?",
+          "char_count": 12,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-qa1-a",
+          "kind": "text",
+          "section_id": "faq-section",
+          "current_text": "Les deux. La GUI sert à administrer ; la CLI sert aussi à vérifier, comprendre et dépanner.",
+          "char_count": 91,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-qa2-q",
+          "kind": "heading",
+          "section_id": "faq-section",
+          "current_text": "Est-ce orienté production ?",
+          "char_count": 27,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-qa2-a",
+          "kind": "text",
+          "section_id": "faq-section",
+          "current_text": "Oui. Les modules privilégient les changements maîtrisés, les preuves techniques, les sauvegardes, le rollback et la supervision.",
+          "char_count": 128,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-qa3-q",
+          "kind": "heading",
+          "section_id": "faq-section",
+          "current_text": "Puis-je utiliser le cursus pour préparer une certification ?",
+          "char_count": 60,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-qa3-a",
+          "kind": "text",
+          "section_id": "faq-section",
+          "current_text": "Oui, mais la priorité reste la compréhension et l’exploitation réelle plutôt que la mémorisation d’un examen.",
+          "char_count": 109,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "cta-2-heading",
+          "kind": "heading",
+          "section_id": "cta-2-section",
+          "current_text": "Besoin d’un point de repère ?",
+          "char_count": 29,
+          "data_field": "text",
+          "slot": "cta-strip-title",
+          "level": 2
+        },
+        {
+          "id": "cta-2-body",
+          "kind": "text",
+          "section_id": "cta-2-section",
+          "current_text": "Retrouve les réponses détaillées sur le fonctionnement du cursus et les notions abordées.",
+          "char_count": 89,
+          "data_field": "content",
+          "slot": "cta-strip-body"
+        }
+      ],
+      "image_nodes": [],
+      "cta_nodes": [
+        {
+          "id": "hero-cta-primary",
+          "kind": "button",
+          "section_id": "hero-section",
+          "current_text": "Commencer le parcours",
+          "current_href": "/parcours",
+          "slot": "hero-cta-primary"
+        },
+        {
+          "id": "hero-cta-secondary",
+          "kind": "button",
+          "section_id": "hero-section",
+          "current_text": "Voir les 21 modules",
+          "current_href": "/modules",
+          "slot": "hero-cta-secondary"
+        },
+        {
+          "id": "cta-cta-primary",
+          "kind": "button",
+          "section_id": "cta-section",
+          "current_text": "Ouvrir les labs",
+          "current_href": "/labs",
+          "slot": "cta-strip-cta"
+        },
+        {
+          "id": "cta-cta-secondary",
+          "kind": "button",
+          "section_id": "cta-section",
+          "current_text": "Consulter le glossaire",
+          "current_href": "/glossaire",
+          "slot": "cta-strip-cta"
+        },
+        {
+          "id": "cta-2-cta-primary",
+          "kind": "button",
+          "section_id": "cta-2-section",
+          "current_text": "Voir la FAQ",
+          "current_href": "/faq",
+          "slot": "cta-strip-cta"
+        },
+        {
+          "id": "cta-2-cta-secondary",
+          "kind": "button",
+          "section_id": "cta-2-section",
+          "current_text": "Voir les modules",
+          "current_href": "/modules",
+          "slot": "cta-strip-cta"
+        }
+      ],
+      "form_nodes": [],
+      "content_nodes": [
+        {
+          "id": "co-page",
+          "node_type": "page",
+          "section_id": null,
+          "slot": null,
+          "fields": [
+            {
+              "key": "title",
+              "kind": "text",
+              "text": "Home"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "/parcours",
+      "title": "Parcours",
+      "text_nodes": [
+        {
+          "id": "0957732f-ee57-4a41-a23e-25fbf8b20ee7",
+          "kind": "heading",
+          "section_id": "2722a6ed-8299-4b04-8b00-8264c519e35c",
+          "current_text": "Parcours",
+          "char_count": 8,
+          "data_field": "text",
+          "slot": null,
+          "level": 1
+        },
+        {
+          "id": "process-steps-2-eyebrow",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "PROGRESSION",
+          "char_count": 11,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "process-steps-2-heading",
+          "kind": "heading",
+          "section_id": "process-steps-2-section",
+          "current_text": "Un parcours du niveau débutant au niveau expert",
+          "char_count": 47,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "process-steps-2-step0-num",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "01",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-2-step0-title",
+          "kind": "heading",
+          "section_id": "process-steps-2-section",
+          "current_text": "1. Fondations",
+          "char_count": 13,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-2-step0-body",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "Comprendre les interfaces, les VLAN, le routage, les règles de pare-feu, le NAT et les profils de sécurité.",
+          "char_count": 107,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "process-steps-2-step1-num",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "02",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-2-step1-title",
+          "kind": "heading",
+          "section_id": "process-steps-2-section",
+          "current_text": "2. Administration avancée",
+          "char_count": 25,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-2-step1-body",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "Maîtriser les VPN, le SD-WAN, le diagnostic, la haute disponibilité, OSPF, BGP, l’identité et les VDOM.",
+          "char_count": 103,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "process-steps-2-step2-num",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "03",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-2-step2-title",
+          "kind": "heading",
+          "section_id": "process-steps-2-section",
+          "current_text": "3. Production",
+          "char_count": 13,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-2-step2-body",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "Administrer FortiSwitch, FortiAP, FortiClient EMS, ZTNA, les certificats et la supervision.",
+          "char_count": 91,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "process-steps-2-step3-num",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "04",
+          "char_count": 2,
+          "data_field": "content",
+          "slot": "card-meta"
+        },
+        {
+          "id": "process-steps-2-step3-title",
+          "kind": "heading",
+          "section_id": "process-steps-2-section",
+          "current_text": "4. Expertise",
+          "char_count": 12,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "process-steps-2-step3-body",
+          "kind": "text",
+          "section_id": "process-steps-2-section",
+          "current_text": "Centraliser avec FortiManager et FortiAnalyzer, préparer les mises à jour et résoudre des incidents multi-sites.",
+          "char_count": 112,
+          "data_field": "content",
+          "slot": "card-body"
+        }
+      ],
+      "image_nodes": [],
+      "cta_nodes": [],
+      "form_nodes": [],
+      "content_nodes": [
+        {
+          "id": "c5bc7103-afb9-4739-9cd7-c7ee0aab4b8f",
+          "node_type": "page",
+          "section_id": null,
+          "slot": null,
+          "fields": [
+            {
+              "key": "title",
+              "kind": "text",
+              "text": "Parcours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "/modules",
+      "title": "Modules",
+      "text_nodes": [
+        {
+          "id": "73fb3a50-98e5-4022-970e-0090bf263548",
+          "kind": "heading",
+          "section_id": "2e22b16a-96fe-4da7-93d9-ddf1d9bd6ab4",
+          "current_text": "Modules",
+          "char_count": 7,
+          "data_field": "text",
+          "slot": null,
+          "level": 1
+        },
+        {
+          "id": "features-3-eyebrow",
+          "kind": "text",
+          "section_id": "features-3-section",
+          "current_text": "21 MODULES",
+          "char_count": 10,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "features-3-heading",
+          "kind": "heading",
+          "section_id": "features-3-section",
+          "current_text": "Tous les sujets à maîtriser",
+          "char_count": 27,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "features-3-body",
+          "kind": "text",
+          "section_id": "features-3-section",
+          "current_text": "Le cursus couvre le réseau, la sécurité, l’identité, l’exploitation et le dépannage Fortinet.",
+          "char_count": 93,
+          "data_field": "content",
+          "slot": "section-body"
+        },
+        {
+          "id": "features-3-card0-title",
+          "kind": "heading",
+          "section_id": "features-3-section",
+          "current_text": "01–04 • Fondations",
+          "char_count": 18,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-3-card0-body",
+          "kind": "text",
+          "section_id": "features-3-section",
+          "current_text": "Fondamentaux FortiGate, réseau et VLAN, règles de pare-feu et NAT, profils de sécurité.",
+          "char_count": 87,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-3-card1-title",
+          "kind": "heading",
+          "section_id": "features-3-section",
+          "current_text": "05–08 • Interconnexion et exploitation",
+          "char_count": 38,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-3-card1-body",
+          "kind": "text",
+          "section_id": "features-3-section",
+          "current_text": "VPN et SD-WAN, journaux et diagnostic, haute disponibilité, écosystème Fortinet.",
+          "char_count": 80,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-3-card2-title",
+          "kind": "heading",
+          "section_id": "features-3-section",
+          "current_text": "09–14 • Administration avancée",
+          "char_count": 30,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-3-card2-body",
+          "kind": "text",
+          "section_id": "features-3-section",
+          "current_text": "OSPF et BGP, Active Directory et FSSO, VDOM, FortiSwitch/FortiAP, EMS/ZTNA, supervision RUN.",
+          "char_count": 92,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-3-card3-title",
+          "kind": "heading",
+          "section_id": "features-3-section",
+          "current_text": "15–18 • Sécurité et services",
+          "char_count": 28,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-3-card3-body",
+          "kind": "text",
+          "section_id": "features-3-section",
+          "current_text": "Certificats et TLS, DNS/DHCP/NTP, accès distant, durcissement du FortiGate.",
+          "char_count": 75,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-3-card4-title",
+          "kind": "heading",
+          "section_id": "features-3-section",
+          "current_text": "19–21 • Production et examen",
+          "char_count": 28,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-3-card4-body",
+          "kind": "text",
+          "section_id": "features-3-section",
+          "current_text": "FortiManager/FortiAnalyzer, sauvegarde et mise à jour FortiOS, laboratoire final multi-sites.",
+          "char_count": 93,
+          "data_field": "content",
+          "slot": "card-body"
+        }
+      ],
+      "image_nodes": [],
+      "cta_nodes": [],
+      "form_nodes": [],
+      "content_nodes": [
+        {
+          "id": "4beb5e63-0117-4a15-b099-7d0b62fc8f37",
+          "node_type": "page",
+          "section_id": null,
+          "slot": null,
+          "fields": [
+            {
+              "key": "title",
+              "kind": "text",
+              "text": "Modules"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "/labs",
+      "title": "Labs",
+      "text_nodes": [
+        {
+          "id": "29308188-5b79-4253-b45b-cd038124d09b",
+          "kind": "heading",
+          "section_id": "faa3658c-6d1d-447f-9023-750202c4ee00",
+          "current_text": "Labs",
+          "char_count": 4,
+          "data_field": "text",
+          "slot": null,
+          "level": 1
+        },
+        {
+          "id": "features-4-eyebrow",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "CAS PRATIQUES",
+          "char_count": 13,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "features-4-heading",
+          "kind": "heading",
+          "section_id": "features-4-section",
+          "current_text": "Apprendre en résolvant des incidents",
+          "char_count": 36,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "features-4-body",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "Chaque exercice part d’un symptôme et oblige à prouver où se situe la panne avant de corriger.",
+          "char_count": 94,
+          "data_field": "content",
+          "slot": "section-body"
+        },
+        {
+          "id": "features-4-card0-title",
+          "kind": "heading",
+          "section_id": "features-4-section",
+          "current_text": "Poste sans Internet",
+          "char_count": 19,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-4-card0-body",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "Vérifier passerelle, route par défaut, règle LAN vers WAN, NAT, session et journaux.",
+          "char_count": 84,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-4-card1-title",
+          "kind": "heading",
+          "section_id": "features-4-section",
+          "current_text": "VLAN sans DHCP",
+          "char_count": 14,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-4-card1-body",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "Contrôler le trunk, l’identifiant VLAN, le serveur ou relais DHCP et capturer les échanges.",
+          "char_count": 91,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-4-card2-title",
+          "kind": "heading",
+          "section_id": "features-4-section",
+          "current_text": "VPN actif mais trafic bloqué",
+          "char_count": 28,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-4-card2-body",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "Contrôler routes, règles, sélecteurs Phase 2, compteurs et chemin retour.",
+          "char_count": 73,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-4-card3-title",
+          "kind": "heading",
+          "section_id": "features-4-section",
+          "current_text": "Application cassée par l’inspection TLS",
+          "char_count": 39,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-4-card3-body",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "Identifier le certificat, la chaîne de confiance, le profil d’inspection et l’exception ciblée.",
+          "char_count": 95,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-4-card4-title",
+          "kind": "heading",
+          "section_id": "features-4-section",
+          "current_text": "Utilisateur AD mal reconnu",
+          "char_count": 26,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-4-card4-body",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "Comparer LDAP, groupes, FSSO, adresse IP et règle de pare-feu réellement appliquée.",
+          "char_count": 83,
+          "data_field": "content",
+          "slot": "card-body"
+        },
+        {
+          "id": "features-4-card5-title",
+          "kind": "heading",
+          "section_id": "features-4-section",
+          "current_text": "Examen final multi-sites",
+          "char_count": 24,
+          "data_field": "text",
+          "slot": "card-title",
+          "level": 3
+        },
+        {
+          "id": "features-4-card5-body",
+          "kind": "text",
+          "section_id": "features-4-section",
+          "current_text": "Diagnostiquer plusieurs pannes simultanées sur un siège, une agence, une DMZ et un double accès WAN.",
+          "char_count": 100,
+          "data_field": "content",
+          "slot": "card-body"
+        }
+      ],
+      "image_nodes": [],
+      "cta_nodes": [],
+      "form_nodes": [],
+      "content_nodes": [
+        {
+          "id": "ac592ad5-906b-4286-8f3c-21aa9086dbed",
+          "node_type": "page",
+          "section_id": null,
+          "slot": null,
+          "fields": [
+            {
+              "key": "title",
+              "kind": "text",
+              "text": "Labs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "/glossaire",
+      "title": "Glossaire",
+      "text_nodes": [
+        {
+          "id": "7cd59f62-48f6-442e-8489-0920d9a14dbe",
+          "kind": "heading",
+          "section_id": "581ee906-3070-4aff-b43f-4d68527aede6",
+          "current_text": "Glossaire",
+          "char_count": 9,
+          "data_field": "text",
+          "slot": null,
+          "level": 1
+        },
+        {
+          "id": "faq-2-eyebrow",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "GLOSSAIRE",
+          "char_count": 9,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "faq-2-heading",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "Les termes essentiels à connaître",
+          "char_count": 33,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "faq-2-qa0-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "Règle de pare-feu (Firewall Policy)",
+          "char_count": 35,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa0-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Règle qui définit quels flux sont autorisés ou refusés selon les interfaces, sources, destinations, services et profils de sécurité.",
+          "char_count": 132,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa1-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "Session",
+          "char_count": 7,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa1-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "État d’une connexion suivi par le FortiGate. Une session permet au pare-feu stateful de reconnaître les paquets appartenant à un flux déjà établi.",
+          "char_count": 146,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa2-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "NAT",
+          "char_count": 3,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa2-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Traduction d’adresses réseau. Le SNAT modifie généralement l’adresse source ; le DNAT ou VIP sert notamment à publier un service interne.",
+          "char_count": 137,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa3-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "VIP",
+          "char_count": 3,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa3-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Virtual IP : objet utilisé pour traduire une adresse ou un port exposé vers une ressource interne.",
+          "char_count": 98,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa4-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "FSSO",
+          "char_count": 4,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa4-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Fortinet Single Sign-On : mécanisme permettant d’associer une identité utilisateur à une adresse IP pour appliquer des règles basées sur l’identité.",
+          "char_count": 148,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa5-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "VDOM",
+          "char_count": 4,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa5-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Virtual Domain : contexte logique isolé disposant notamment de ses propres interfaces, routes et règles.",
+          "char_count": 104,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa6-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "FortiLink",
+          "char_count": 9,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa6-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Mécanisme de gestion qui permet au FortiGate de piloter des FortiSwitch intégrés à l’infrastructure.",
+          "char_count": 100,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa7-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "ZTNA",
+          "char_count": 4,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa7-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Zero Trust Network Access : contrôle d’accès basé sur l’identité, le terminal et sa posture de sécurité.",
+          "char_count": 104,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa8-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "ADOM",
+          "char_count": 4,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa8-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Administrative Domain : domaine administratif utilisé notamment dans FortiManager et FortiAnalyzer pour séparer des périmètres.",
+          "char_count": 127,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-2-qa9-q",
+          "kind": "heading",
+          "section_id": "faq-2-section",
+          "current_text": "Debug Flow",
+          "char_count": 10,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-2-qa9-a",
+          "kind": "text",
+          "section_id": "faq-2-section",
+          "current_text": "Outil de diagnostic FortiOS qui permet de comprendre les décisions prises lors du traitement d’un flux réseau.",
+          "char_count": 110,
+          "data_field": "content",
+          "slot": "faq-answer"
+        }
+      ],
+      "image_nodes": [],
+      "cta_nodes": [],
+      "form_nodes": [],
+      "content_nodes": [
+        {
+          "id": "7e4b98b0-5242-4443-98cd-ea4c229c52f5",
+          "node_type": "page",
+          "section_id": null,
+          "slot": null,
+          "fields": [
+            {
+              "key": "title",
+              "kind": "text",
+              "text": "Glossaire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "/faq",
+      "title": "FAQ",
+      "text_nodes": [
+        {
+          "id": "b4a2e09a-03f0-49be-9d96-02106b39d41f",
+          "kind": "heading",
+          "section_id": "35c04cd0-4ae1-4bd7-ad7e-b456b25a021c",
+          "current_text": "FAQ",
+          "char_count": 3,
+          "data_field": "text",
+          "slot": null,
+          "level": 1
+        },
+        {
+          "id": "faq-3-eyebrow",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "FAQ",
+          "char_count": 3,
+          "data_field": "content",
+          "slot": "section-eyebrow"
+        },
+        {
+          "id": "faq-3-heading",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "Questions sur la formation",
+          "char_count": 26,
+          "data_field": "text",
+          "slot": "section-title",
+          "level": 2
+        },
+        {
+          "id": "faq-3-qa0-q",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "Faut-il déjà connaître Fortinet ?",
+          "char_count": 33,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-3-qa0-a",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "Non. Le cursus commence par les fondamentaux réseau et la logique d’un pare-feu stateful avant d’aborder les fonctions avancées.",
+          "char_count": 128,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-3-qa1-q",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "La formation montre-t-elle la GUI FortiOS ?",
+          "char_count": 43,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-3-qa1-a",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "Oui. Les notions importantes sont reliées aux menus FortiOS afin de savoir où configurer et où vérifier.",
+          "char_count": 104,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-3-qa2-q",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "Y a-t-il des commandes CLI ?",
+          "char_count": 28,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-3-qa2-a",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "Oui. La CLI est utilisée pour les vérifications, le routage, les sessions, les VPN, le sniffer, le debug et les diagnostics avancés.",
+          "char_count": 132,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-3-qa3-q",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "Le contenu est-il orienté entreprise ?",
+          "char_count": 38,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-3-qa3-a",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "Oui. Sauvegardes, haute disponibilité, supervision, multi-sites, changements maîtrisés et diagnostic de production font partie du parcours.",
+          "char_count": 139,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-3-qa4-q",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "Est-ce uniquement du FortiGate ?",
+          "char_count": 32,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-3-qa4-a",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "Non. Le cursus aborde aussi FortiManager, FortiAnalyzer, FortiSwitch, FortiAP, FortiClient EMS, FortiGuard et ZTNA.",
+          "char_count": 115,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-3-qa5-q",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "Peut-on s’en servir pour préparer une certification Fortinet ?",
+          "char_count": 62,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-3-qa5-a",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "Oui pour consolider les concepts et la pratique, mais le contenu privilégie la compréhension opérationnelle plutôt que la mémorisation de réponses d’examen.",
+          "char_count": 156,
+          "data_field": "content",
+          "slot": "faq-answer"
+        },
+        {
+          "id": "faq-3-qa6-q",
+          "kind": "heading",
+          "section_id": "faq-3-section",
+          "current_text": "Comment travailler les incidents ?",
+          "char_count": 34,
+          "data_field": "text",
+          "slot": "faq-question",
+          "level": 3
+        },
+        {
+          "id": "faq-3-qa6-a",
+          "kind": "text",
+          "section_id": "faq-3-section",
+          "current_text": "Toujours partir du symptôme, suivre le chemin du flux, collecter une preuve avec les journaux ou la CLI, corriger une seule cause puis valider.",
+          "char_count": 143,
+          "data_field": "content",
+          "slot": "faq-answer"
+        }
+      ],
+      "image_nodes": [],
+      "cta_nodes": [],
+      "form_nodes": [],
+      "content_nodes": [
+        {
+          "id": "8b52774a-2071-4c09-b08b-b4abb7e3efb4",
+          "node_type": "page",
+          "section_id": null,
+          "slot": null,
+          "fields": [
+            {
+              "key": "title",
+              "kind": "text",
+              "text": "FAQ"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
