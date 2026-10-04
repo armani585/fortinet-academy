@@ -91,8 +91,8 @@
           "id": "stats-stat2-lbl",
           "kind": "text",
           "section_id": "stats-section",
-          "current_text": "niveaux : fondations, avancé, expert",
-          "char_count": 36,
+          "current_text": "étapes : fondations, avancé, production, expertise",
+          "char_count": 50,
           "data_field": "content",
           "slot": "stat-label"
         },
