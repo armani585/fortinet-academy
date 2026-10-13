@@ -1,36 +1,344 @@
-import inherited from './inherited.js';
-const choice=(prompt,options,answer,explanation)=>({type:'choice',prompt,options,answer,explanation});
-const text=(prompt,answers,explanation)=>({type:'text',prompt,answers,explanation});
-export const sources={
- interfaces:['Interfaces · FortiOS 7.4.8','https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/574723/interface-settings'],
- start:['Premiers pas · FortiOS 7.4.8','https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/383477/summary-of-steps'],
- routes:['Routage · FortiOS 7.4.5','https://docs.fortinet.com/document/fortigate/7.4.5/administration-guide/139692/routing-concepts'],
- policy:['Ordre des policies · FortiOS 7.4.0','https://docs.fortinet.com/document/fortigate/7.4.0/best-practices/862226/policies'],
- nat:['Dynamic SNAT · FortiOS 7.4.8','https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/29961/dynamic-snat'],
- debug:['Debug Flow · FortiOS 7.4.8','https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/54688/debugging-the-packet-flow'],
- debugGui:['Debug Flow dans le GUI · FortiOS 7.4.8','https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/38044/using-the-debug-flow-tool'],
- cli:['Aide-mémoire CLI · FortiOS 7.4.0','https://docs.fortinet.com/document/fortigate/7.4.0/cli-troubleshooting-cheat-sheet/420966/cli-troubleshooting-cheat-sheet'],
- local:['Local-in et local-out · FortiOS 7.4.8','https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/263651/local-in-and-local-out-logging'],
- hardening:['Durcissement · FortiOS 7.4.0','https://docs.fortinet.com/document/fortigate/7.4.0/best-practices/555436']
+import inherited from "./inherited.js";
+const choice = (prompt, options, answer, explanation) => ({
+  type: "choice",
+  prompt,
+  options,
+  answer,
+  explanation,
+});
+const text = (prompt, answers, explanation) => ({
+  type: "text",
+  prompt,
+  answers,
+  explanation,
+});
+export const sources = {
+  interfaces: [
+    "Interfaces · FortiOS 7.4.8",
+    "https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/574723/interface-settings",
+  ],
+  start: [
+    "Premiers pas · FortiOS 7.4.8",
+    "https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/383477/summary-of-steps",
+  ],
+  routes: [
+    "Routage · FortiOS 7.4.5",
+    "https://docs.fortinet.com/document/fortigate/7.4.5/administration-guide/139692/routing-concepts",
+  ],
+  policy: [
+    "Ordre des policies · FortiOS 7.4.0",
+    "https://docs.fortinet.com/document/fortigate/7.4.0/best-practices/862226/policies",
+  ],
+  nat: [
+    "Dynamic SNAT · FortiOS 7.4.8",
+    "https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/29961/dynamic-snat",
+  ],
+  debug: [
+    "Debug Flow · FortiOS 7.4.8",
+    "https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/54688/debugging-the-packet-flow",
+  ],
+  debugGui: [
+    "Debug Flow dans le GUI · FortiOS 7.4.8",
+    "https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/38044/using-the-debug-flow-tool",
+  ],
+  cli: [
+    "Aide-mémoire CLI · FortiOS 7.4.0",
+    "https://docs.fortinet.com/document/fortigate/7.4.0/cli-troubleshooting-cheat-sheet/420966/cli-troubleshooting-cheat-sheet",
+  ],
+  local: [
+    "Local-in et local-out · FortiOS 7.4.8",
+    "https://docs.fortinet.com/document/fortigate/7.4.8/administration-guide/263651/local-in-and-local-out-logging",
+  ],
+  hardening: [
+    "Durcissement · FortiOS 7.4.0",
+    "https://docs.fortinet.com/document/fortigate/7.4.0/best-practices/555436",
+  ],
 };
-const basics={slug:'bases-reseau',title:'Les bases du réseau',level:'Fondations',minutes:25,objective:'Décrire le trajet d’un paquet et distinguer IP, masque, passerelle, DNS et port.',prereq:'Aucun. Un navigateur et de la curiosité suffisent.',lessons:[
-['Une adresse et un réseau','Une adresse IPv4 contient quatre nombres de 0 à 255. Le préfixe indique quelle partie identifie le réseau : 10.10.10.10/24 appartient à 10.10.10.0/24, avec le masque 255.255.255.0. Dans ce /24 classique, .0 désigne le réseau et .255 la diffusion ; les hôtes utilisent .1 à .254. Deux machines dans le même sous-réseau échangent directement au niveau Ethernet si leur segment le permet. Un masque erroné change la décision « local ou distant ».'],
-['Du poste à la passerelle','Pour joindre 10.10.20.10 depuis 10.10.10.10/24, le poste remet la trame à sa passerelle 10.10.10.1. ARP sert à trouver l’adresse MAC de cette passerelle sur le lien local. L’adresse IP de destination reste celle du serveur, pas celle de la passerelle. Un switch relaie des trames dans un domaine de niveau 2 ; un routeur relie des réseaux IP. Un pare-feu peut assurer ce routage tout en contrôlant le trafic.'],
-['Le service au bout du trajet','TCP et UDP transportent des échanges identifiés par des ports. HTTPS utilise habituellement TCP/443 ; HTTP/3 utilise QUIC sur UDP/443. Le DNS résout un nom en adresse et utilise notamment UDP/53 ou TCP/53. ICMP, utilisé par ping, n’a pas de ports TCP/UDP. Un ping réussi ne démontre donc pas qu’un site HTTPS fonctionne. Pour diagnostiquer, sépare résolution de nom, accès IP, transport et application.']
-],gui:'Sur le poste : paramètres réseau → adresse, masque, passerelle et DNS. Sur FortiGate : Network → Interfaces.',cli:'get system arp\nget router info routing-table all',cliNote:'Commandes FortiOS de consultation. Sur le poste, les commandes dépendent du système d’exploitation.',example:'10.10.10.10/24 veut joindre 198.51.100.20:443. Il transmet au MAC de 10.10.10.1 ; l’IP destination reste 198.51.100.20. Ces adresses externes sont réservées à la documentation.',exercise:['Décide si 10.10.10.42 puis 10.10.20.42 sont locaux pour 10.10.10.10/24.','Identifie l’équipement dont le poste cherche le MAC pour joindre chaque destination.','Ouvre le simulateur et observe les adresses source et destination avant le NAT.'],correction:'10.10.10.42 est local : ARP cherche son MAC. 10.10.20.42 est distant : ARP cherche celui de la passerelle. L’IP destination est toujours celle du destinataire.',pitfall:'Confondre la destination IP du paquet et la destination MAC de la trame du prochain saut.',refs:['interfaces','cli'],quiz:[choice('Quel réseau contient 10.10.10.42/24 ?',['10.10.0.0/16','10.10.10.0/24','10.10.20.0/24'],1,'Un /24 réserve les trois premiers octets au réseau.'),choice('Pour une destination distante, quel MAC le poste cherche-t-il ?',['Celui du serveur distant','Celui de sa passerelle','Celui du DNS'],1,'Le prochain saut Ethernet est la passerelle locale.'),text('Quel protocole résout un nom en adresse IP ?',['DNS','le DNS'],'Le DNS résout les noms ; il ne décide pas si HTTPS est autorisé.')]};
-const routing={slug:'routage',title:'Trouver le bon chemin',level:'Pratique',minutes:30,objective:'Choisir une route par préfixe et expliquer pourquoi une route ne constitue pas une autorisation.',prereq:'Adresses IPv4 et interfaces.',lessons:[
-['La destination choisit le chemin','Dans notre cas simple, sans policy route ni SD-WAN, on recherche la destination dans la table de routage. Parmi les réseaux correspondants, le préfixe le plus long gagne. Pour 10.10.20.10, une route 10.10.20.0/24 est plus précise que 10.10.0.0/16 et que 0.0.0.0/0. La route /0 est un recours lorsqu’aucun préfixe plus précis ne correspond.'],
-['Distance et disponibilité','La distance administrative aide à préférer une source de routage pour un même préfixe. Elle ne transforme pas une route /0 en route plus précise qu’un /24. Une route configurée n’est pas forcément active : état d’interface, accessibilité de la passerelle et protocoles de routage influencent son installation. Le simulateur utilise des routes déjà considérées actives, avec un interrupteur pour les retirer.'],
-['Ne pas oublier le retour','Le chemin aller ne suffit pas. Le serveur doit pouvoir renvoyer sa réponse vers le client, directement ou via une traduction NAT. Un routage asymétrique peut empêcher un pare-feu stateful de suivre correctement la session. Observe les deux sens avant de changer les règles. Les policy routes, le SD-WAN, les VRF et les routes de coût égal introduisent des décisions supplémentaires qui dépassent notre modèle.']
-],gui:'Network → Static Routes pour la configuration. Consulte aussi la table des routes actives dans le moniteur de routage.',cli:'get router info routing-table all\nget router info routing-table details 10.10.20.10',cliNote:'Lecture seule. Vérifie le VDOM ; une route de configuration n’est pas nécessairement une route active.',example:'Deux routes sont actives : 10.10.20.0/24 → dmz (distance 20), 0.0.0.0/0 → wan1 (distance 5). Pour 10.10.20.10, dmz gagne grâce au /24.',exercise:['Dans le simulateur, charge « Application DMZ ».','Observe que /24 gagne face à /0, puis désactive la route DMZ.','Explique pourquoi l’interface choisie et la policy correspondante changent.'],correction:'Avec /24 active, la sortie est dmz et la règle DMZ s’applique. Sans /24, la route par défaut choisit wan1 ; une policy LAN → WAN peut accepter le paquet, sans prouver que cette destination privée est réellement joignable sur ce chemin.',pitfall:'Réduire la distance d’une route par défaut en pensant dépasser une route plus spécifique.',refs:['routes','cli'],quiz:[choice('Quelle route gagne pour 10.10.20.10 ?',['0.0.0.0/0, distance 5','10.10.20.0/24, distance 20','La première saisie'],1,'Le préfixe le plus long gagne avant la distance.'),text('Quel préfixe désigne la route IPv4 par défaut ?',['0.0.0.0/0'],'Le /0 correspond à toutes les destinations IPv4.'),choice('Une route présente prouve-t-elle le succès applicatif ?',['Oui','Non','Oui avec TCP'],1,'Policy, retour et application doivent aussi fonctionner.')]};
-const nat={slug:'comprendre-nat',title:'Comprendre les traductions NAT',level:'Pratique',minutes:30,objective:'Suivre les adresses avant et après SNAT, distinguer SNAT et DNAT et prévoir le retour.',prereq:'Routage et policies.',lessons:[
-['Changer la source','Le SNAT remplace l’adresse source. Dans le laboratoire, 10.10.10.10 devient 203.0.113.2 à la sortie wan1. Le destinataire répond à cette adresse traduite. Le suivi de session permet d’associer la réponse au client initial. Avec plusieurs clients, des ports source distincts permettent généralement le partage d’une adresse : c’est le PAT. Le simulateur montre la traduction d’adresse, pas l’allocation réelle des ports.'],
-['Traduire ne veut pas dire autoriser','Le NAT ne dispense ni de route ni de policy. Une règle qui refuse le paquet arrête le traitement même si la traduction serait configurée ailleurs. Inversement, sans NAT, un paquet peut être autorisé et transmis : l’échec survient éventuellement sur le réseau suivant ou au retour. Entre réseaux internes qui connaissent leurs routes réciproques, conserver les adresses améliore la lisibilité des journaux.'],
-['Publier une destination','Le DNAT modifie la destination ; une VIP peut publier une ressource interne derrière une adresse externe. Cette traduction change les informations utilisées dans le parcours du paquet : on ne doit pas transposer mécaniquement notre schéma SNAT à tous les scénarios VIP. Central NAT utilise des tables séparées. Cette V1 se concentre sur le SNAT dans une policy en mode profile-based ; DNAT et Central NAT sont expliqués, mais non exécutés dans le simulateur.']
-],gui:'Policy & Objects → Firewall Policy : option NAT dans le scénario retenu. IP Pools et Virtual IPs répondent à d’autres besoins.',cli:'show firewall policy\nshow firewall ippool\nshow firewall vip',cliNote:'Lecture seule. Le comportement dépend notamment de Central NAT et du mode NGFW. Les menus peuvent varier selon la version.',example:'Sans SNAT, le simulateur autorise 10.10.10.10 → 198.51.100.20 si la route et la policy conviennent. Il ne prétend pas qu’Internet retournera une réponse vers cette adresse privée.',exercise:['Charge « HTTPS vers Internet » et lance le flux.','Décoche NAT sur la policy HTTPS et recommence.','Compare la source en sortie et explique la condition nécessaire au retour sans NAT.'],correction:'Avec NAT : source 203.0.113.2. Sans NAT : source 10.10.10.10. L’autorisation reste identique ; le réseau distant doit disposer d’un chemin retour approprié, ce qui n’est normalement pas le cas sur Internet pour une IP privée.',pitfall:'Dire « NAT désactivé = refus par le pare-feu ». L’absence de traduction n’est pas une décision de filtrage.',refs:['nat','policy'],quiz:[choice('Sans SNAT, une policy accept peut-elle transmettre le paquet ?',['Non, refus automatique','Oui, mais le retour dépend du routage','Seulement avec une VIP'],1,'Le filtrage et la traduction sont deux fonctions distinctes.'),text('Quelle traduction modifie la destination ?',['DNAT','le DNAT'],'Destination NAT modifie l’adresse ou le port de destination.'),choice('Pourquoi plusieurs clients peuvent-ils partager une adresse traduite ?',['Leurs ports peuvent distinguer les sessions','Ils ont forcément le même MAC','Le DNS crée un tunnel'],0,'Le PAT utilise notamment les ports pour distinguer les connexions.')]};
-const [gate,vlan,policies,debug,admin]=inherited;
-gate.title='Prendre en main FortiGate';gate.refs=['start','local','cli'];gate.lessons[2][1]=gate.lessons[2][1].replace('« 7.6 »','« 7.4 »');
-policies.title='Écrire des policies lisibles';policies.refs=['policy','nat'];policies.cliNote='Lecture seule. Référentiel pédagogique FortiOS 7.4, mode profile-based. Central NAT et le mode policy-based ne sont pas simulés.';
-debug.refs=['debug','debugGui','cli'];admin.refs=['hardening','local','interfaces'];admin.level='Administration';
-export const courses=[basics,gate,vlan,routing,policies,nat,debug,admin].map((c,i)=>({...c,id:i+1,prereq:i===0?c.prereq:'Notions des modules précédents ; accès libre si vous les maîtrisez déjà.',icon:['◎','▣','⑂','↗','≡','⇄','⌕','◇'][i],summary:['IP, masque, passerelle et ports : les repères indispensables.','Sessions, interfaces et séparation entre transit et administration.','Segmentez le réseau et comprenez le rôle du tag 802.1Q.','Préfixes, routes actives et chemin retour, sans raccourci.','Autorisez le bon flux, dans le bon ordre, avec la bonne règle.','Suivez les adresses avant et après la traduction.','Transformez un symptôme en preuve avec les bons outils.','Maîtrisez les accès, les privilèges et la récupération.'][i]}));
-export const glossary=[['CIDR','Notation qui associe une adresse à une longueur de préfixe, par exemple 10.10.10.0/24.'],['Policy','Règle qui décide du traitement d’un trafic correspondant à des interfaces, adresses, services et autres critères.'],['Session','État conservé pour suivre une connexion et associer ses paquets et réponses.'],['SNAT','Traduction de l’adresse source ; le PAT peut aussi modifier le port source.'],['DNAT','Traduction de l’adresse ou du port de destination.'],['VIP','Virtual IP : objet utilisé notamment pour publier une destination interne via DNAT.'],['VLAN','Domaine de niveau 2 logique, transporté avec un tag 802.1Q sur un lien trunk.'],['VDOM','Domaine virtuel qui sépare des contextes d’administration et de traitement sur un FortiGate.'],['Local-in','Trafic destiné au FortiGate lui-même, par exemple une connexion administrative.'],['RPF','Reverse Path Forwarding : vérification du chemin vers la source, non modélisée dans ce simulateur.'],['FortiOS','Système d’exploitation des pare-feu FortiGate. Les fonctions dépendent de la version et du modèle.'],['Offload','Traitement accéléré matériellement ; peut rendre un trafic moins visible dans certains diagnostics logiciels.'],['DMZ','Segment isolé destiné notamment à des services exposés, avec des règles de communication explicites.'],['Route par défaut','Route IPv4 0.0.0.0/0, utilisée en l’absence de correspondance plus précise.'],['Moindre privilège','Principe consistant à n’accorder que les droits nécessaires au besoin.'],['FortiAnalyzer','Produit Fortinet de centralisation et d’analyse des journaux. Non intégré dans cette V1.']];
+const basics = {
+  slug: "bases-reseau",
+  title: "Les bases du réseau",
+  level: "Fondations",
+  minutes: 25,
+  objective:
+    "Décrire le trajet d’un paquet et distinguer IP, masque, passerelle, DNS et port.",
+  prereq: "Aucun. Un navigateur et de la curiosité suffisent.",
+  lessons: [
+    [
+      "Une adresse et un réseau",
+      "Une adresse IPv4 contient quatre nombres de 0 à 255. Le préfixe indique quelle partie identifie le réseau : 10.10.10.10/24 appartient à 10.10.10.0/24, avec le masque 255.255.255.0. Dans ce /24 classique, .0 désigne le réseau et .255 la diffusion ; les hôtes utilisent .1 à .254. Deux machines dans le même sous-réseau échangent directement au niveau Ethernet si leur segment le permet. Un masque erroné change la décision « local ou distant ».",
+    ],
+    [
+      "Du poste à la passerelle",
+      "Pour joindre 10.10.20.10 depuis 10.10.10.10/24, le poste remet la trame à sa passerelle 10.10.10.1. ARP sert à trouver l’adresse MAC de cette passerelle sur le lien local. L’adresse IP de destination reste celle du serveur, pas celle de la passerelle. Un switch relaie des trames dans un domaine de niveau 2 ; un routeur relie des réseaux IP. Un pare-feu peut assurer ce routage tout en contrôlant le trafic.",
+    ],
+    [
+      "Le service au bout du trajet",
+      "TCP et UDP transportent des échanges identifiés par des ports. HTTPS utilise habituellement TCP/443 ; HTTP/3 utilise QUIC sur UDP/443. Le DNS résout un nom en adresse et utilise notamment UDP/53 ou TCP/53. ICMP, utilisé par ping, n’a pas de ports TCP/UDP. Un ping réussi ne démontre donc pas qu’un site HTTPS fonctionne. Pour diagnostiquer, sépare résolution de nom, accès IP, transport et application.",
+    ],
+  ],
+  gui: "Sur le poste : paramètres réseau → adresse, masque, passerelle et DNS. Sur FortiGate : Network → Interfaces.",
+  cli: "get system arp\nget router info routing-table all",
+  cliNote:
+    "Commandes FortiOS de consultation. Sur le poste, les commandes dépendent du système d’exploitation.",
+  example:
+    "10.10.10.10/24 veut joindre 198.51.100.20:443. Il transmet au MAC de 10.10.10.1 ; l’IP destination reste 198.51.100.20. Ces adresses externes sont réservées à la documentation.",
+  exercise: [
+    "Décide si 10.10.10.42 puis 10.10.20.42 sont locaux pour 10.10.10.10/24.",
+    "Identifie l’équipement dont le poste cherche le MAC pour joindre chaque destination.",
+    "Ouvre le simulateur et observe les adresses source et destination avant le NAT.",
+  ],
+  correction:
+    "10.10.10.42 est local : ARP cherche son MAC. 10.10.20.42 est distant : ARP cherche celui de la passerelle. L’IP destination est toujours celle du destinataire.",
+  pitfall:
+    "Confondre la destination IP du paquet et la destination MAC de la trame du prochain saut.",
+  refs: ["interfaces", "cli"],
+  quiz: [
+    choice(
+      "Quel réseau contient 10.10.10.42/24 ?",
+      ["10.10.0.0/16", "10.10.10.0/24", "10.10.20.0/24"],
+      1,
+      "Un /24 réserve les trois premiers octets au réseau.",
+    ),
+    choice(
+      "Pour une destination distante, quel MAC le poste cherche-t-il ?",
+      ["Celui du serveur distant", "Celui de sa passerelle", "Celui du DNS"],
+      1,
+      "Le prochain saut Ethernet est la passerelle locale.",
+    ),
+    text(
+      "Quel protocole résout un nom en adresse IP ?",
+      ["DNS", "le DNS"],
+      "Le DNS résout les noms ; il ne décide pas si HTTPS est autorisé.",
+    ),
+  ],
+};
+const routing = {
+  slug: "routage",
+  title: "Trouver le bon chemin",
+  level: "Pratique",
+  minutes: 30,
+  objective:
+    "Choisir une route par préfixe et expliquer pourquoi une route ne constitue pas une autorisation.",
+  prereq: "Adresses IPv4 et interfaces.",
+  lessons: [
+    [
+      "La destination choisit le chemin",
+      "Dans notre cas simple, sans policy route ni SD-WAN, on recherche la destination dans la table de routage. Parmi les réseaux correspondants, le préfixe le plus long gagne. Pour 10.10.20.10, une route 10.10.20.0/24 est plus précise que 10.10.0.0/16 et que 0.0.0.0/0. La route /0 est un recours lorsqu’aucun préfixe plus précis ne correspond.",
+    ],
+    [
+      "Distance et disponibilité",
+      "La distance administrative aide à préférer une source de routage pour un même préfixe. Elle ne transforme pas une route /0 en route plus précise qu’un /24. Une route configurée n’est pas forcément active : état d’interface, accessibilité de la passerelle et protocoles de routage influencent son installation. Le simulateur utilise des routes déjà considérées actives, avec un interrupteur pour les retirer.",
+    ],
+    [
+      "Ne pas oublier le retour",
+      "Le chemin aller ne suffit pas. Le serveur doit pouvoir renvoyer sa réponse vers le client, directement ou via une traduction NAT. Un routage asymétrique peut empêcher un pare-feu stateful de suivre correctement la session. Observe les deux sens avant de changer les règles. Les policy routes, le SD-WAN, les VRF et les routes de coût égal introduisent des décisions supplémentaires qui dépassent notre modèle.",
+    ],
+  ],
+  gui: "Network → Static Routes pour la configuration. Consulte aussi la table des routes actives dans le moniteur de routage.",
+  cli: "get router info routing-table all\nget router info routing-table details 10.10.20.10",
+  cliNote:
+    "Lecture seule. Vérifie le VDOM ; une route de configuration n’est pas nécessairement une route active.",
+  example:
+    "Deux routes sont actives : 10.10.20.0/24 → dmz (distance 20), 0.0.0.0/0 → wan1 (distance 5). Pour 10.10.20.10, dmz gagne grâce au /24.",
+  exercise: [
+    "Dans le simulateur, charge « Application DMZ ».",
+    "Observe que /24 gagne face à /0, puis désactive la route DMZ.",
+    "Explique pourquoi l’interface choisie et la policy correspondante changent.",
+  ],
+  correction:
+    "Avec /24 active, la sortie est dmz et la règle DMZ s’applique. Sans /24, la route par défaut choisit wan1 ; une policy LAN → WAN peut accepter le paquet, sans prouver que cette destination privée est réellement joignable sur ce chemin.",
+  pitfall:
+    "Réduire la distance d’une route par défaut en pensant dépasser une route plus spécifique.",
+  refs: ["routes", "cli"],
+  quiz: [
+    choice(
+      "Quelle route gagne pour 10.10.20.10 ?",
+      [
+        "0.0.0.0/0, distance 5",
+        "10.10.20.0/24, distance 20",
+        "La première saisie",
+      ],
+      1,
+      "Le préfixe le plus long gagne avant la distance.",
+    ),
+    text(
+      "Quel préfixe désigne la route IPv4 par défaut ?",
+      ["0.0.0.0/0"],
+      "Le /0 correspond à toutes les destinations IPv4.",
+    ),
+    choice(
+      "Une route présente prouve-t-elle le succès applicatif ?",
+      ["Oui", "Non", "Oui avec TCP"],
+      1,
+      "Policy, retour et application doivent aussi fonctionner.",
+    ),
+  ],
+};
+const nat = {
+  slug: "comprendre-nat",
+  title: "Comprendre les traductions NAT",
+  level: "Pratique",
+  minutes: 30,
+  objective:
+    "Suivre les adresses avant et après SNAT, distinguer SNAT et DNAT et prévoir le retour.",
+  prereq: "Routage et policies.",
+  lessons: [
+    [
+      "Changer la source",
+      "Le SNAT remplace l’adresse source. Dans le laboratoire, 10.10.10.10 devient 203.0.113.2 à la sortie wan1. Le destinataire répond à cette adresse traduite. Le suivi de session permet d’associer la réponse au client initial. Avec plusieurs clients, des ports source distincts permettent généralement le partage d’une adresse : c’est le PAT. Le simulateur montre la traduction d’adresse, pas l’allocation réelle des ports.",
+    ],
+    [
+      "Traduire ne veut pas dire autoriser",
+      "Le NAT ne dispense ni de route ni de policy. Une règle qui refuse le paquet arrête le traitement même si la traduction serait configurée ailleurs. Inversement, sans NAT, un paquet peut être autorisé et transmis : l’échec survient éventuellement sur le réseau suivant ou au retour. Entre réseaux internes qui connaissent leurs routes réciproques, conserver les adresses améliore la lisibilité des journaux.",
+    ],
+    [
+      "Publier une destination",
+      "Le DNAT modifie la destination ; une VIP peut publier une ressource interne derrière une adresse externe. Cette traduction change les informations utilisées dans le parcours du paquet : on ne doit pas transposer mécaniquement notre schéma SNAT à tous les scénarios VIP. Central NAT utilise des tables séparées. Cette V1 se concentre sur le SNAT dans une policy en mode profile-based ; DNAT et Central NAT sont expliqués, mais non exécutés dans le simulateur.",
+    ],
+  ],
+  gui: "Policy & Objects → Firewall Policy : option NAT dans le scénario retenu. IP Pools et Virtual IPs répondent à d’autres besoins.",
+  cli: "show firewall policy\nshow firewall ippool\nshow firewall vip",
+  cliNote:
+    "Lecture seule. Le comportement dépend notamment de Central NAT et du mode NGFW. Les menus peuvent varier selon la version.",
+  example:
+    "Sans SNAT, le simulateur autorise 10.10.10.10 → 198.51.100.20 si la route et la policy conviennent. Il ne prétend pas qu’Internet retournera une réponse vers cette adresse privée.",
+  exercise: [
+    "Charge « HTTPS vers Internet » et lance le flux.",
+    "Décoche NAT sur la policy HTTPS et recommence.",
+    "Compare la source en sortie et explique la condition nécessaire au retour sans NAT.",
+  ],
+  correction:
+    "Avec NAT : source 203.0.113.2. Sans NAT : source 10.10.10.10. L’autorisation reste identique ; le réseau distant doit disposer d’un chemin retour approprié, ce qui n’est normalement pas le cas sur Internet pour une IP privée.",
+  pitfall:
+    "Dire « NAT désactivé = refus par le pare-feu ». L’absence de traduction n’est pas une décision de filtrage.",
+  refs: ["nat", "policy"],
+  quiz: [
+    choice(
+      "Sans SNAT, une policy accept peut-elle transmettre le paquet ?",
+      [
+        "Non, refus automatique",
+        "Oui, mais le retour dépend du routage",
+        "Seulement avec une VIP",
+      ],
+      1,
+      "Le filtrage et la traduction sont deux fonctions distinctes.",
+    ),
+    text(
+      "Quelle traduction modifie la destination ?",
+      ["DNAT", "le DNAT"],
+      "Destination NAT modifie l’adresse ou le port de destination.",
+    ),
+    choice(
+      "Pourquoi plusieurs clients peuvent-ils partager une adresse traduite ?",
+      [
+        "Leurs ports peuvent distinguer les sessions",
+        "Ils ont forcément le même MAC",
+        "Le DNS crée un tunnel",
+      ],
+      0,
+      "Le PAT utilise notamment les ports pour distinguer les connexions.",
+    ),
+  ],
+};
+const [gate, vlan, policies, debug, admin] = inherited;
+gate.title = "Prendre en main FortiGate";
+gate.refs = ["start", "local", "cli"];
+gate.lessons[2][1] = gate.lessons[2][1].replace("« 7.6 »", "« 7.4 »");
+policies.title = "Écrire des policies lisibles";
+policies.refs = ["policy", "nat"];
+policies.cliNote =
+  "Lecture seule. Référentiel pédagogique FortiOS 7.4, mode profile-based. Central NAT et le mode policy-based ne sont pas simulés.";
+debug.refs = ["debug", "debugGui", "cli"];
+admin.refs = ["hardening", "local", "interfaces"];
+admin.level = "Administration";
+export const courses = [
+  basics,
+  gate,
+  vlan,
+  routing,
+  policies,
+  nat,
+  debug,
+  admin,
+].map((c, i) => ({
+  ...c,
+  id: i + 1,
+  prereq:
+    i === 0
+      ? c.prereq
+      : "Notions des modules précédents ; accès libre si vous les maîtrisez déjà.",
+  icon: ["◎", "▣", "⑂", "↗", "≡", "⇄", "⌕", "◇"][i],
+  summary: [
+    "IP, masque, passerelle et ports : les repères indispensables.",
+    "Sessions, interfaces et séparation entre transit et administration.",
+    "Segmentez le réseau et comprenez le rôle du tag 802.1Q.",
+    "Préfixes, routes actives et chemin retour, sans raccourci.",
+    "Autorisez le bon flux, dans le bon ordre, avec la bonne règle.",
+    "Suivez les adresses avant et après la traduction.",
+    "Transformez un symptôme en preuve avec les bons outils.",
+    "Maîtrisez les accès, les privilèges et la récupération.",
+  ][i],
+}));
+export const glossary = [
+  [
+    "CIDR",
+    "Notation qui associe une adresse à une longueur de préfixe, par exemple 10.10.10.0/24.",
+  ],
+  [
+    "Policy",
+    "Règle qui décide du traitement d’un trafic correspondant à des interfaces, adresses, services et autres critères.",
+  ],
+  [
+    "Session",
+    "État conservé pour suivre une connexion et associer ses paquets et réponses.",
+  ],
+  [
+    "SNAT",
+    "Traduction de l’adresse source ; le PAT peut aussi modifier le port source.",
+  ],
+  ["DNAT", "Traduction de l’adresse ou du port de destination."],
+  [
+    "VIP",
+    "Virtual IP : objet utilisé notamment pour publier une destination interne via DNAT.",
+  ],
+  [
+    "VLAN",
+    "Domaine de niveau 2 logique, transporté avec un tag 802.1Q sur un lien trunk.",
+  ],
+  [
+    "VDOM",
+    "Domaine virtuel qui sépare des contextes d’administration et de traitement sur un FortiGate.",
+  ],
+  [
+    "Local-in",
+    "Trafic destiné au FortiGate lui-même, par exemple une connexion administrative.",
+  ],
+  [
+    "RPF",
+    "Reverse Path Forwarding : vérification du chemin vers la source, non modélisée dans ce simulateur.",
+  ],
+  [
+    "FortiOS",
+    "Système d’exploitation des pare-feu FortiGate. Les fonctions dépendent de la version et du modèle.",
+  ],
+  [
+    "Offload",
+    "Traitement accéléré matériellement ; peut rendre un trafic moins visible dans certains diagnostics logiciels.",
+  ],
+  [
+    "DMZ",
+    "Segment isolé destiné notamment à des services exposés, avec des règles de communication explicites.",
+  ],
+  [
+    "Route par défaut",
+    "Route IPv4 0.0.0.0/0, utilisée en l’absence de correspondance plus précise.",
+  ],
+  [
+    "Moindre privilège",
+    "Principe consistant à n’accorder que les droits nécessaires au besoin.",
+  ],
+  [
+    "FortiAnalyzer",
+    "Produit Fortinet de centralisation et d’analyse des journaux. Non intégré dans cette V1.",
+  ],
+];

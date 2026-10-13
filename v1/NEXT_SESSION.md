@@ -1,5 +1,7 @@
 # Reprendre le projet
 
+Pull request de livraison : https://github.com/armani585/fortinet-academy/pull/1 (ouverte, non fusionnée lors de la livraison).
+
 1. Lire PROJECT_CONTEXT.md et DECISIONS.md. Le cahier des charges complet est aussi résumé dans README.md.
 2. Dépôt : `armani585/fortinet-academy`, branche `codex/fortinet-academy-interactive-v1`, application dans `v1/`. Consulter le diff et l’état GitHub avant tout changement ; ne pas supposer la pull request fusionnée.
 3. Localement, le dossier livré est autonome : lancer `npm start`, ouvrir http://127.0.0.1:4173/. Lors de la création, une prévisualisation utilisait le port 4174. Sa disponibilité dépend du processus local.
